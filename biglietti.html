@@ -6,6 +6,42 @@
     <title>Biglietti Stadio</title>
 </head>
 <body>
-    
-</body>
+    <form action="cambio.php" method="get">
+        <label >Nome:</label><br>
+        <input style="color: white; background-color: rgb(94, 94, 94);" type="text"  name="nome"><br>
+        <label >Cognome:</label><br>
+        <input style="color: white; background-color: rgb(94, 94, 94);" type="text"  name="cognome"><br>
+        <label >Codice Fiscale:</label><br>
+        <input style="color: white; background-color: rgb(94, 94, 94);" type="text"  name="cf"><br>
+        <br>
+        <select style="color: white; background-color: rgb(94, 94, 94);"  name="settore">
+            <option value="1">Curva</option>
+            <option value="2">Tribuna Centrale</option>
+            <option value="3">tribuna d'onore</option>
+        </select>
+        <br>
+        <br>
+        <label >Codice Sconto:</label><br>
+        <input style="color: white; background-color: rgb(94, 94, 94);" type="text"  name="sconto"><br>
+        <br>
+        <label>Numero biglietti:</label><br>
+        <input type="radio" id="lname" name="biglietto" checked="true" value="Biglietto Unico">Biglietto Unico<br>
+        <input onclick="mostraDiv()" type="radio" id="aggiuntivi" name="biglietto" value="Piu' biglietto" >Più biglietti<br>
+        <br>
+        <div id="div1" style="display: none;">
+        <h3>Biglietto/i Aggiuntivo/i:</h3>
+        <label>Codice Fiscale:</label><br>
+        <input type="text" style="color: white; background-color: rgb(94, 94, 94);" name="cfAggiuntivo"><br>
+        <label>Num biglietti aggiuntivi:</label><br>
+        <input type="number" style="color: white; background-color: rgb(94, 94, 94);" readonly value="1" name="numBiglietti"><br>
+        <br>
+        <button style="background-color: green; width: 5%; height: 50px;">+</button>
+        <button style="background-color: red; width: 5%; height: 50px">-</button>
+        </div>
+        <br>
+        <input style="color: black;" type="submit">
+
+        </form>
+        <script src="./js/script.js"></script>
+    </body>
 </html>
