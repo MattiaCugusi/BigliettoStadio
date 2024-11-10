@@ -14,17 +14,23 @@ function nascondiDiv(){
     div.style.display = "none";
 }
 
+let inc = 0;
+
 function aggiungiPersona(){
 
     let biglietti = document.getElementById("biglietti");
     let valAttuale = parseInt(biglietti.value);
+
+    
 
    if (valAttuale < 4){
     biglietti.value = valAttuale + 1;
 
        let nuovoInput = document.createElement("input");
         nuovoInput.type = "text";
-        nuovoInput.name = "cfAggiuntivo"; // Nome per il nuovo input
+        
+        inc++;
+        nuovoInput.name = "cfAggiuntivo" + inc ; // Nome per il nuovo input
         nuovoInput.placeholder = "Inserisci Codice Fiscale";
         nuovoInput.style.color = "white";
         nuovoInput.style.backgroundColor = "rgb(94, 94, 94)";
