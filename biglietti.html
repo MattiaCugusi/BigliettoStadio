@@ -6,13 +6,18 @@
     <title>Biglietti Stadio</title>
 </head>
 <body>
-    <form action="cambio.php" method="get">
+    <form action="gestioneacquisto.php" id="form"  method="post">
         <label >Nome:</label><br>
         <input style="color: white; background-color: rgb(94, 94, 94);" type="text"  name="nome"><br>
         <label >Cognome:</label><br>
         <input style="color: white; background-color: rgb(94, 94, 94);" type="text"  name="cognome"><br>
         <label >Codice Fiscale:</label><br>
         <input style="color: white; background-color: rgb(94, 94, 94);" type="text"  name="cf"><br>
+        <br><label for="lname">Data:</label><br>
+        <input type="date" id="lname" name="data"><br>
+        <br>
+        <label >Orario:</label><br>
+        <input type="time"  name="orario"><br>
         <br>
         <select style="color: white; background-color: rgb(94, 94, 94);"  name="settore">
             <option value="1">Curva</option>
@@ -30,17 +35,20 @@
         <br>
         <div id="div1" style="display: none;">
         <h3>Biglietto/i Aggiuntivo/i:</h3>
-        <label>Codice Fiscale:</label><br>
-        <input type="text" style="color: white; background-color: rgb(94, 94, 94);" name="cfAggiuntivo"><br>
+        
         <label>Num biglietti aggiuntivi:</label><br>
-        <input type="number" style="color: white; background-color: rgb(94, 94, 94);" readonly value="1" name="numBiglietti"><br>
+        <input type="number" style="color: white; background-color: rgb(94, 94, 94);" id="biglietti" readonly value="1" name="numBiglietti"><br>
         <br>
-        <button style="background-color: green; width: 5%; height: 50px;">+</button>
-        <button style="background-color: red; width: 5%; height: 50px">-</button>
+        <button type="button" onclick="aggiungiPersona()" style="background-color: green; width: 5%; height: 50px;">+</button>
+        <button type="button" onclick="rimuoviPersona()" style="background-color: red; width: 5%; height: 50px">-</button>
+        <br>
+        <br>
+        <label>Codice Fiscale:</label><br>
+        <input type="text" style="color: white; background-color: rgb(94, 94, 94);" name="cfAggiuntivo">
         </div>
-        <br>
+        
         <input style="color: black;" type="submit">
-
+        
         </form>
         <script src="./js/script.js"></script>
     </body>
